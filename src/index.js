@@ -13,7 +13,7 @@ const getData = (filepath) =>
   );
 
 
-const gendiff = (filepath1, filepath2, formatName = 'stylish') => { //gendiff
+const gendiff = (filepath1, filepath2, formatName = 'stylish') => {
   const fullFilePath1 = getFullPath(filepath1);
   const fullFilePath2 = getFullPath(filepath2);
   const data1 = getData(fullFilePath1);
