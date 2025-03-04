@@ -8,8 +8,8 @@ const getPrefix = (level, tabSize, offset) => tab.repeat(level * tabSize - offse
 
 const checkOfValue = (data, deep) => {
   const formattedValue = _.isPlainObject(data) 
-  ? '{' + Object.entries(data).map(([key, value]) => `\n${getPrefix(deep, tabSize, offset - 6)}${key}: ${checkOfValue(value, deep + 1)}`).join(' ') + `\n${getPrefix(deep, tabSize, offset - 2)}}`
-  : String(data);
+  ? '{' + Object.entries(data).map(([key, value]) => `\n${getPrefix(deep, tabSize, offset - 6)}${key}: ${checkOfValue(value, deep + 1)}`).join('') + `\n${getPrefix(deep, tabSize, offset - 2)}}`
+  : data;
   return formattedValue
 };
 
