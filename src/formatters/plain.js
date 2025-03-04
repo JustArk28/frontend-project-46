@@ -29,7 +29,7 @@ const checkOfValue = (value) => {
         throw new Error('Something wrong');
       }          
     }).join('');
-    return result(array)
+    return result(array).trim()
   };  
 
 export default plain;
