@@ -17,7 +17,9 @@ const buildData = (data1, data2) => {
       return { type: 'unchanged', key, value: data1[key] };
     } if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
       return { type: 'nested', key, value: buildData(value1, value2) };
-    } return { type: 'changed', key, value1: data1[key], value2: data2[key] };
+    } return { 
+      type: 'changed', key, value1: data1[key], value2: data2[key] 
+    };
   });
 };
 
