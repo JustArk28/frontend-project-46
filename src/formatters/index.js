@@ -1,6 +1,5 @@
-
-import plain from './plain.js'
-import stylish from './stylish.js'
+import plain from './plain.js';
+import stylish from './stylish.js';
 import json from './json.js';
 
 const format = (data, format) => {
