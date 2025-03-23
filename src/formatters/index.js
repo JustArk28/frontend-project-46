@@ -2,13 +2,13 @@ import plain from './plain.js';
 import stylish from './stylish.js';
 import json from './json.js';
 
-const format = (data, format1) => {
-  const formats = {
+const format = (data, typeOfFormatters) => {
+  const formatters = {
     stylish,
     plain,
     json,
   };
-  return formats[format1](data);
+  return formatters[typeOfFormatters](data);
 };
 
 export default format;
