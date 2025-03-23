@@ -22,7 +22,7 @@ const plain = (array) => {
         return `Property '${fullPath}' was updated. From ${checkOfValue(obj.value1)} to ${checkOfValue(obj.value2)}\n`;
       case 'nested':
         return result(obj.value, fullPath);
-      case 'unchanged': 
+      case 'unchanged':
         return '';
       default:
         throw new Error('Something wrong');

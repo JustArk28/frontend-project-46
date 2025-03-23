@@ -3,7 +3,7 @@ import _ from 'lodash';
 const buildData = (data1, data2) => {
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
-  const keys = _.union(keys1, keys2).sort();
+  const keys = _.union(keys1, keys2).sort(); // eslint-disable-line
 
   return keys.map((key) => {
     const value1 = data1[key];
@@ -17,8 +17,8 @@ const buildData = (data1, data2) => {
       return { type: 'unchanged', key, value: data1[key] };
     } if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
       return { type: 'nested', key, value: buildData(value1, value2) };
-    } return { 
-      type: 'changed', key, value1: data1[key], value2: data2[key] 
+    } return {
+      type: 'changed', key, value1: data1[key], value2: data2[key],
     };
   });
 };
