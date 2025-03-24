@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import process from 'process';
 import parser from './parser.js';
 import buildData from './compare.js';
 import format from './formatters/index.js';
