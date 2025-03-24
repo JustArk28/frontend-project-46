@@ -1,1 +1,1 @@
-export default (array) => JSON.stringify(array, null, 2);
+export default (dataOfObjects) => JSON.stringify(dataOfObjects, null, 2);

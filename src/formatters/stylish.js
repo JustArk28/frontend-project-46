@@ -8,12 +8,12 @@ const getPrefix = (level, sizeOfTab, offsetPrefix) => tab.repeat(level * sizeOfT
 
 const checkOfValue = (data, deep) => {
   const formattedValue = _.isPlainObject(data)
-  ? `{${Object.entries(data).map(([key, value]) => `\n${getPrefix(deep, tabSize, offset - 6)}${key}: ${checkOfValue(value, deep + 1)}`).join('')}\n${getPrefix(deep, tabSize, offset - 2)}}`
+    ? `{${Object.entries(data).map(([key, value]) => `\n${getPrefix(deep, tabSize, offset - 6)}${key}: ${checkOfValue(value, deep + 1)}`).join('')}\n${getPrefix(deep, tabSize, offset - 2)}}`
     : data;
   return formattedValue;
 };
 
-const stylish = (array) => {
+const stylish = (dataOfObjects) => {
   const depth = (array, level) => {
     const result = array.map((obj) => {
       switch (obj.type) {
@@ -33,7 +33,7 @@ const stylish = (array) => {
     }).join('');
     return `{${result}\n${getPrefix(level, tabSize, offset + 2)}}`;
   };
-  return depth(array, 1);
+  return depth(dataOfObjects, 1);
 };
 
 export default stylish;

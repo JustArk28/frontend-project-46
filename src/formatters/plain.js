@@ -10,7 +10,7 @@ const checkOfValue = (value) => {
   return value;
 };
 
-const plain = (array) => {
+const plain = (dataOfObjects) => {
   const result = (diff, path = '') => diff.map((obj) => {
     const fullPath = path ? `${path}.${obj.key}` : `${obj.key}`;
     switch (obj.type) {
@@ -28,7 +28,7 @@ const plain = (array) => {
         throw new Error('Something wrong');
     }
   }).join('');
-  return result(array).trim();
+  return result(dataOfObjects).trim();
 };
 
 export default plain;
