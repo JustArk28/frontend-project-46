@@ -7,10 +7,10 @@ const offset = 2;
 const getPrefix = (level, sizeOfTab, offsetPrefix) => tab.repeat(level * sizeOfTab - offsetPrefix);
 
 const checkOfValue = (data, deep) => {
-  if (_.isPlainObject(data)) {
-    return '{' + Object.entries(data).map(([key, value]) => `\n${getPrefix(deep, tabSize, offset - 6)}${key}: ${checkOfValue(value, deep + 1)}`).join('') + `\n${getPrefix(deep, tabSize, offset - 2)}}`
-  }
-  return data;
+  const formattedValue = _.isPlainObject(data)
+  ? `{` + Object.entries(data).map(([key, value]) => `\n${getPrefix(deep, tabSize, offset - 6)}${key}: ${checkOfValue(value, deep + 1)}`).join('') + `\n${getPrefix(deep, tabSize, offset - 2)}}`
+    : data;
+  return formattedValue;
 };
 
 const stylish = (array) => {
