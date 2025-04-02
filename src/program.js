@@ -8,6 +8,6 @@ export default () => program
   .version('0.8.0')
   .option('-f, --format [type]', 'Output format', 'stylish')
   .action((filepath1, filepath2) => {
-    console.log(gendiff(filepath1, filepath2, program.opts().format));
+    console.log(gendiff1(filepath1, filepath2, program.opts().format));
   })
   .parse();
