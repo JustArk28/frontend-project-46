@@ -1,8 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/JustArk28/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/JustArk28/frontend-project-46/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/062b6c4ee8e7aa709fd4/maintainability)](https://codeclimate.com/github/JustArk28/frontend-project-46/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/062b6c4ee8e7aa709fd4/test_coverage)](https://codeclimate.com/github/JustArk28/frontend-project-46/test_coverage)
-
 
 Сравнение плоских файлов (JSON)
 [![asciicast](https://asciinema.org/a/EuxIJQOEQxdK0sY3fX7Qp7o9Y.svg)](https://asciinema.org/a/EuxIJQOEQxdK0sY3fX7Qp7o9Y)
