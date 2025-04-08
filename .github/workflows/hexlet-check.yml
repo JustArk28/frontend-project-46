@@ -22,4 +22,21 @@ jobs:
         uses: hexlet/project-action@release
         with:
           hexlet-id: ${{ secrets.HEXLET_ID }}
-
+      - run: make install
+      - run: make lint
+      # - run: make test
+      # - name: Test & publish code coverage
+      #   # Publish code coverage on Code Climate
+      #   # https://github.com/paambaati/codeclimate-action
+        # uses: paambaati/codeclimate-action@v5.0.0
+      #   # Add Code Climate secret key
+      #   env:
+      #    
+        # with:
+        #   coverageCommand: make test-coverage
+        #   debug: true
+      - name: Test & publish code coverage
+        uses: qltysh/qlty-action/coverage@main
+        with:
+         coverage-token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+         files: coverage/lcov.info
