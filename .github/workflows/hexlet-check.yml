@@ -24,7 +24,7 @@ jobs:
           hexlet-id: ${{ secrets.HEXLET_ID }}
       - run: make install
       - run: make lint
-      - run: make test
+      #- run: make test
       - name: Test & publish code coverage
         uses: qltysh/qlty-action/coverage@main
         with:
