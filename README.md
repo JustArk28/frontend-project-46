@@ -5,9 +5,10 @@
 
 # Проект "Вычислитель отличий"
 Программа, определяющая разницу между двумя структурами данных. 
+
 Возможности утилиты:
-    Поддержка разных входных форматов: yaml, json,
-    Генерация отчета в виде plain, stylish и json. 
+- Поддержка разных входных форматов: yaml, json,
+- Генерация отчета в виде plain, stylish и json. 
 
 ## Сравнение плоских файлов (JSON)
 [![asciicast](https://asciinema.org/a/EuxIJQOEQxdK0sY3fX7Qp7o9Y.svg)](https://asciinema.org/a/EuxIJQOEQxdK0sY3fX7Qp7o9Y)
